@@ -10,6 +10,23 @@
   margin: 0 0 24px;
 }
 
+.strategy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.strategy-img {
+  max-height: 200px;
+  width: 100%;
+}
+.strategy-title {
+  margin: 0 0 29px;
+}
+.strategy-container {
+  padding: 24px 33px 26px 33px;
+}
+
 .strategies__tags {
   margin: 0 0 31px;
  ;

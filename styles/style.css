@@ -464,6 +464,12 @@ h5 {
   line-height: 3rem;
 }
 
+.block_shadowed {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 .tags {
   display: flex;
   justify-content: flex-start;
@@ -537,7 +543,7 @@ h5 {
   flex-wrap: wrap;
 }
 .layout-3-columns > * {
-  flex-basis: 30%;
+  flex-basis: 31%;
 }
 
 .layout-2-columns {
@@ -673,6 +679,26 @@ h5 {
 
 .strategies__descriptions {
   margin: 0 0 24px;
+}
+
+.strategy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.strategy-img {
+  max-height: 200px;
+  width: 100%;
+}
+
+.strategy-title {
+  margin: 0 0 29px;
+}
+
+.strategy-container {
+  padding: 24px 33px 26px 33px;
 }
 
 .strategies__tags {
