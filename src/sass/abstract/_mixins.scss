@@ -1,17 +1,38 @@
-@mixin font ($size, $height, $weight: bold, $style: normal) {
+@mixin font($size, $height, $weight: bold, $style: normal) {
   font-size: $size;
   font-weight: $weight;
   font-style: $style;
   line-height: $height;
 }
 
-@mixin column ($width) {
+@mixin column($width) {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: stretch;
-  >* {
+  > * {
     flex-basis: $width;
   }
 }
 
+@mixin media-laptop {
+  @media (max-width: $content-width) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media (max-width: $tablet-width) {
+    @content;
+  }
+}
+@mixin media-mobile {
+  @media (max-width: $mobile-big-width) {
+    @content;
+  }
+}
+@mixin media-small {
+  @media (max-width: $mobile-small-width) {
+    @content;
+  }
+}

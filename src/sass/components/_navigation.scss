@@ -5,28 +5,3 @@
   font-size: 1.5rem;
   line-height: 2.8rem;
 }
-
-.footer-navigation__links {
-  margin: 0;
-  padding: 0;
-  & a {
-    @extend %font-additional;
-    @extend %transition;
-    line-height: 3.5rem;
-    color: $color-text;
-    text-decoration: none;
-    &:hover {
-      color: $color-primary;
-    }
-  }
-}
-
-.footer-navigation__link,
-.navigation__link {
-  list-style: none;
-  cursor: pointer;
-  @extend %transition;
-  &:hover {
-    color: $color-primary;
-  }
-}

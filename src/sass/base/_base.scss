@@ -15,6 +15,9 @@ h1 {
   @extend %font-additional;
   @include font(4.4rem, 5.4rem);
   color: $color-heading;
+  @include media-mobile {
+    @include font(3.2rem, 4.2rem);
+  }
 }
 
 h2 {
@@ -40,4 +43,8 @@ h5 {
 .block_shadowed {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
+}
+
+.logo {
+  line-height: 0;
 }

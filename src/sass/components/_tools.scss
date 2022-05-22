@@ -1,6 +1,17 @@
+
+.tool {
+  @include media-laptop {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   flex-wrap: wrap;
+  }
+}
+
 .tools_wrapper {
   padding-bottom: 90px;
-  background: url('../../assets/img/tools_bg.png') no-repeat center bottom;
+  background: url('../assets/img/tools_bg.png') no-repeat center bottom;
   background-size: 100%;
 }
 
