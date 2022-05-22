@@ -4,7 +4,6 @@
 }
 
 .icon-square {
-  display: inline-block;
   width: 50px;
   height: 50px;
   border-radius: 19px;
@@ -23,6 +22,16 @@
   &_blue {
     background-color: $color-blue;
   }
+}
+
+.icon-round {
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  background-color: $color-light;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .icon_play {
@@ -49,6 +58,17 @@
   background: url('../assets/img/icons/time.svg') no-repeat center;
   width: 18px;
   height: 18px;
+}
+
+.icon_phone {
+  background: url('../assets/img/icons/phone.svg') no-repeat center;
+  width: 10px;
+  height: 10px;
+}
+.icon_email {
+  background: url('../assets/img/icons/email.svg') no-repeat center;
+  width: 10px;
+  height: 10px;
 }
 
 

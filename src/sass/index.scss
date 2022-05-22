@@ -10,8 +10,8 @@
 
 @import './layouts/wrapper';
 @import './layouts/header';
-
 @import './layouts/columns';
+@import './layouts/footer';
 
 @import './components/navigation';
 @import './components/buttons';
@@ -19,4 +19,6 @@
 @import './components/promo';
 @import './components/tools';
 @import './components/strategies';
-@import './layouts/footer';
+@import './components/about-us';
+@import './components/employee';
+

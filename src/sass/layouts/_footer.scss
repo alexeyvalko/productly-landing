@@ -2,6 +2,14 @@
   padding: 58px 0;
 }
 
+.footer_wrapper {
+  display: flex;
+  gap:150px;
+  justify-content: space-between;
+}
+.footer-navigation {
+  flex-grow: 1;
+}
 .footer-navigation__title {
-  margin: 0;
+  margin: 0 0 15px;
 }

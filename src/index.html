@@ -115,7 +115,7 @@
         <span class="tag tag_bordered">Culture</span>
         <span class="tag tag_bordered">Design</span>
       </div>
-      <div class="layout-3-columns">
+      <div class="layout-3-columns strategies__wrapper">
         <div class="strategy block_shadowed">
           <img src="./assets/img/strategies/1.jpg" alt="strategy" class="strategy-img">
           <div class="strategy-container">
@@ -144,40 +144,92 @@
             </div>
           </div>
         </div>
+
+        <div class="strategy strategy__wide block_shadowed">
+          <img src="./assets/img/strategies/4.jpg" alt="strategy" class="strategy-img">
+          <div class="strategy-container">
+            <h3 class="strategy-title">Success Steps For Your Personal Or Business Life Plus Funny Image on the Back</h3>
+            <div class="tags">
+              <span class="tag tag_colored">Art</span>
+            </div>
+          </div>
+        </div>
+        <div class="strategy block_shadowed">
+          <img src="./assets/img/strategies/5.jpg" alt="strategy" class="strategy-img">
+          <div class="strategy-container">
+            <h3 class="strategy-title">Success Steps For Your Personal Or Business Life</h3>
+            <div class="tags">
+              <span class="tag tag_colored">Art</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="strategy block_shadowed">
+          <img src="./assets/img/strategies/1.jpg" alt="strategy" class="strategy-img">
+          <div class="strategy-container">
+            <h3 class="strategy-title">Increasing Prosperity With Positive Thinking</h3>
+            <div class="tags">
+              <span class="tag tag_colored">Art</span>
+              <span class="tag tag_colored">Design</span>
+            </div>
+          </div>
+        </div>
+        <div class="strategy block_shadowed">
+          <img src="./assets/img/strategies/2.jpg" alt="strategy" class="strategy-img">
+          <div class="strategy-container">
+            <h3 class="strategy-title">Motivation Is The First Step To Success</h3>
+            <div class="tags">
+              <span class="tag tag_colored">Culture</span>
+            </div>
+          </div>
+        </div>
+        <div class="strategy block_shadowed">
+          <img src="./assets/img/strategies/3.jpg" alt="strategy" class="strategy-img">
+          <div class="strategy-container">
+            <h3 class="strategy-title">Success Steps For Your Personal Or Business Life</h3>
+            <div class="tags">
+              <span class="tag tag_colored">Art</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
   <section class="about-us">
     <div class="wrapper">
-      <h2>About Us</h2>
+      <h2 class="about-us__title">About Us</h2>
       <p class="about-us__description">
         Your About Us page is vital. It’s often the first stop in any user’s journey through a website or blog. It also
         shouldn’t be their last, because first impressions count online just as much as they do in the real world. If
         your visitors aren’t impressed, you can expect them to leave without reading your awesome content or completing
         a conversion action (e.g., signing up for your newsletter, making a purchase).
       </p>
-      <div class="layout-3-columns">
-        <div class="emlpoyee block_shadowed">
+      <div class="layout-3-columns employees">
+        <div class="employee block_shadowed">
           <div class="employee__content">
-            <h5>Kathy Rosenberg</h5>
+            <p class="employee__name">Kathy Rosenberg</p>
             <p class="employee__title">Product Manager</p>
-            <a href="mailto:kathyr@gmail.com">kathyr@gmail.com</a>
+            <a class='employee__link' href="mailto:kathyr@gmail.com">kathyr@gmail.com</a>
           </div>
+          <div class="employee_image"><img class="employee_img" src="./assets/img/avatars/1.jpg" alt="avatar"></div>
         </div>
-        <div class="emlpoyee block_shadowed">
+        <div class="employee block_shadowed">
           <div class="employee__content">
-            <h5>Kathy Rosenberg</h5>
+            <p class="employee__name">Kathy Rosenberg</p>
             <p class="employee__title">Product Manager</p>
-            <a href="mailto:kathyr@gmail.com">kathyr@gmail.com</a>
+            <a class='employee__link' href="mailto:kathyr@gmail.com">kathyr@gmail.com</a>
           </div>
+          <div class="employee_image"><img class="employee_img" src="./assets/img/avatars/2.jpg" alt="avatar"></div>
         </div>
-        <div class="emlpoyee block_shadowed">
+        <div class="employee block_shadowed">
           <div class="employee__content">
-            <h5>Kathy Rosenberg</h5>
+            <p class="employee__name">Kathy Rosenberg</p>
             <p class="employee__title">Product Manager</p>
-            <a href="mailto:kathyr@gmail.com">kathyr@gmail.com</a>
+            <a class='employee__link' href="mailto:kathyr@gmail.com">kathyr@gmail.com</a>
           </div>
+          <div class="employee_image"><img class="employee_img" src="./assets/img/avatars/3.jpg" alt="avatar"></div>
         </div>
       </div>
     </div>
@@ -193,12 +245,12 @@
             just as much as they do in the real world. If your visitors aren’t impressed, you can expect them to leave
             without reading your awesome content or completing a conversion action (e.g., signing up for your
             newsletter, making a purchase).</p>
-          <p>
-            <span class="icon icon_pone"><a href="tel:+375 (22) 345-00-99">+375 (22) 345-00-99</a></span>
-          </p>
-          <p>
-            <span class="icon icon_email"><a href="mailto:emailname@gmail.com">emailname@gmail.com</a></span>
-          </p>
+          <div class="contact-us__contacts">
+            <span class="icon-round"><span class="icon icon_phone"></span></span><a class='contact-us__link' href="tel:+375 (22) 345-00-99">+375 (22) 345-00-99</a>
+          </div>
+          <div class="contact-us__contacts">
+            <span class="icon-round"><span class="icon icon_email"></span></span> <a class='contact-us__link' href="mailto:emailname@gmail.com">emailname@gmail.com</a>
+          </div>
         </div>
         <div class="contact-us__form">
           <form action="#" method="post">
@@ -217,10 +269,11 @@
   </section>
 
   <footer class="footer">
-    <div class="wrapper">
-      <div class="layout-4-columns">
+    <div class="wrapper footer_wrapper">
+      
         <a class="logo" href="#"><img src="./assets/img/logo.png" alt="logo"></a>
-        <div class="footer-navigation">
+        <div class="footer-navigation layout-3-columns">
+        <div class="footer-navigation__column">
           <h5 class="footer-navigation__title">Quick Links</h5>
           <ul class="footer-navigation__links">
             <li class="footer-navigation__link"><a href="#">About Us</a></li>
@@ -229,7 +282,7 @@
             <li class="footer-navigation__link"><a href="#">FAQ</a></li>
           </ul>
         </div>
-        <div class="footer-navigation">
+        <div class="footer-navigation__column">
           <h5 class="footer-navigation__title">Quick Links</h5>
           <ul class="footer-navigation__links">
             <li class="footer-navigation__link"><a href="#">About Us</a></li>
@@ -238,7 +291,7 @@
             <li class="footer-navigation__link"><a href="#">FAQ</a></li>
           </ul>
         </div>
-        <div class="footer-navigation">
+        <div class="footer-navigation__column">
           <h5 class="footer-navigation__title">Quick Links</h5>
           <ul class="footer-navigation__links">
             <li class="footer-navigation__link"><a href="#">About Us</a></li>

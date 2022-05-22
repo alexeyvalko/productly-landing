@@ -14,7 +14,24 @@
 }
 
 .contact-us__description {
-  margin: 0;
+  margin: 0 0 59px 0;
+}
+
+.contact-us__contacts {
+  display: flex;
+  align-items: center;
+  margin-bottom: 19px;
+  gap: 11px;
+}
+
+.contact-us__link {
+  padding-left: 11px;
+  @include font(2.5rem, 2.6rem, 400);
+  color: $color-heading;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .contact-us__form {
