@@ -341,11 +341,12 @@ template {
   display: none;
 }
 
-.button, .navigation__link, .tag {
+.button, .footer-navigation__link,
+.navigation__link, .footer-navigation__links a, .tag {
   transition: all 0.3s ease-in-out;
 }
 
-.promo__description, .link-button, h1 {
+.promo__description, .link-button, .footer-navigation__links a, h1 {
   font-family: "Poppins", sans-serif;
 }
 
@@ -385,37 +386,38 @@ h5, h4, h3, h2 {
 }
 
 .icon_play {
-  background: url("../../assets/img/icons/play.svg") no-repeat center;
+  background: url("../assets/img/icons/play.svg") no-repeat center;
   width: 18px;
   height: 20px;
 }
 
 .icon_arrow {
-  background: url("../../assets/img/icons/arrow.svg") no-repeat center;
+  background: url("../assets/img/icons/arrow.svg") no-repeat center;
   width: 18px;
   height: 18px;
 }
 
 .icon_chain {
-  background: url("../../assets/img/icons/chain.svg") no-repeat center;
+  background: url("../assets/img/icons/chain.svg") no-repeat center;
   width: 18px;
   height: 18px;
 }
 
 .icon_heart {
-  background: url("../../assets/img/icons/heart.svg") no-repeat center;
+  background: url("../assets/img/icons/heart.svg") no-repeat center;
   width: 18px;
   height: 18px;
 }
 
 .icon_time {
-  background: url("../../assets/img/icons/time.svg") no-repeat center;
+  background: url("../assets/img/icons/time.svg") no-repeat center;
   width: 18px;
   height: 18px;
 }
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -563,10 +565,24 @@ h5 {
   line-height: 2.8rem;
 }
 
+.footer-navigation__links {
+  padding: 0;
+}
+.footer-navigation__links a {
+  line-height: 3.5rem;
+  color: #544837;
+  text-decoration: none;
+}
+.footer-navigation__links a:hover {
+  color: #FF9900;
+}
+
+.footer-navigation__link,
 .navigation__link {
   list-style: none;
   cursor: pointer;
 }
+.footer-navigation__link:hover,
 .navigation__link:hover {
   color: #FF9900;
 }
@@ -734,6 +750,14 @@ h5 {
 
 .strategies__tags {
   margin: 0 0 31px;
+}
+
+.footer {
+  padding: 58px 0;
+}
+
+.footer-navigation__title {
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
