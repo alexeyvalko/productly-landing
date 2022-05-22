@@ -4,10 +4,16 @@
 
 .about-us__title {
   margin: 0 0 15px 0;
+  @include media-laptop {
+    text-align: center;
+  }
 }
 
 .about-us__description {
   margin: 0 0 45px 0;
+  @include media-tablet {
+    text-align: center;
+  }
 }
 
 

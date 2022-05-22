@@ -2,10 +2,18 @@
   padding: 58px 0;
 }
 
+
+.footer-logo {
+  max-width: 198px;
+}
 .footer_wrapper {
   display: flex;
   gap:150px;
   justify-content: space-between;
+  @include media-laptop {
+    flex-direction: column;
+    gap: 34px;
+  }
 }
 .footer-navigation {
   flex-grow: 1;

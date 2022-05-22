@@ -7,15 +7,28 @@
   }
   @include media-mobile {
     @include column(100%);
+    flex-direction: column;
     justify-content: center;
     gap: 0;
   }
 }
 
 .layout-3-columns {
-  @include column(31%)
+  @include column(31%);
+  @include media-mobile {
+    @include column(100%);
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+  }
 }
 
 .layout-2-columns {
-  @include column(48%)
+  @include column(48%);
+  @include media-mobile {
+    @include column(100%);
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+  }
 }

@@ -19,6 +19,9 @@
   max-width: 462px;
   margin: 111px auto 70px auto;
   text-align: center;
+  @include media-laptop {
+    margin: 72px auto 70px auto;
+  }
 }
 
 .tool__title {

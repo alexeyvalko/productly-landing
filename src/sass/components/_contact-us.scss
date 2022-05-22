@@ -1,6 +1,25 @@
 .contact-us {
   background-color: $color-background;
   padding: 62px 0 82px;
+  @include media-laptop {
+    text-align: center;
+  }
+}
+
+.contact-us__wrapper {
+  @include media-laptop {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+}
+.contact-us__content {
+  @include media-laptop {
+    margin-bottom: 54px;
+  }
+  @include media-tablet {
+    margin-bottom: 41px;
+  }
 }
 
 .contact-us_line {
@@ -22,6 +41,9 @@
   align-items: center;
   margin-bottom: 19px;
   gap: 11px;
+  @include media-laptop {
+    justify-content: center;
+  }
 }
 
 .contact-us__link {
