@@ -1,7 +1,7 @@
 .layout-4-columns {
   @include column(21%);
   @include media-laptop {
-    @include column(30%);
+    @include column(38%);
     justify-content: center;
     gap: 71px;
   }
@@ -9,7 +9,7 @@
     @include column(100%);
     flex-direction: column;
     justify-content: center;
-    gap: 0;
+    gap: 47px;
   }
 }
 
