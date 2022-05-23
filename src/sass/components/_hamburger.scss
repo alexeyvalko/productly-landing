@@ -3,7 +3,7 @@
   position: relative;
   width: 31px;
   height: 25px;
-  z-index: 2;
+  z-index: 15;
   display: none;
   @include media-laptop {
     display: flex;
@@ -49,15 +49,53 @@
   }
 }
 
+.hamburger-menu {
+  z-index: 10;
+  padding: 100px 55px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 342px;
+  height: 100vh;
+  background-color: $color-light;
+  transform: translate(0, 0);
+  @extend %transition;
+  display: none;
+  @include media-laptop {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.hamburger__links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  & a {
+    @extend %font-additional;
+    @extend %transition;
+    line-height: 3.5rem;
+    color: $color-text;
+    text-decoration: none;
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+.hamburger-menu.hide {
+  transform: translateX(-100%);
+}
+
 
 .hamburger.crest > .hamburger-line {
   width: 0;
 }
 .hamburger.crest > .hamburger-line::before {
   background: #232323;
-  transform: rotate(45deg) translate(0px, 15px);
+  transform: rotate(45deg) translate(0px, 11px);
 }
 .hamburger.crest > .hamburger-line::after {
   background: #232323;
-  transform: rotate(-45deg) translate(0px, -14px);
+  transform: rotate(-45deg) translate(0px, -11px);
 }

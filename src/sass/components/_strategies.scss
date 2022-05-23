@@ -4,7 +4,6 @@
 
 .strategies__wrapper {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
 
@@ -23,6 +22,7 @@
     max-width: 376px;
   }
   @include media-laptop {
+    justify-content: center;
     & > * {
       max-width: 323px;
     }
@@ -55,6 +55,10 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  cursor: pointer;
+  &_hidden {
+    display: none;
+  }
 }
 
 .strategy-img {

@@ -1,0 +1,63 @@
+export class Modal {
+  constructor(classes) {
+    this.classes = classes;
+    this.modal = '';
+    this.modalContent = '';
+    this.modalCloseBtn = '';
+    this.modalImage = '';
+  }
+
+  buildModal(strategyData) {
+    this.modalImage = this.createHtmlNode('img', 'modal__image');
+    this.overlay = this.createHtmlNode('div', 'overlay');
+    this.modal = this.createHtmlNode('div', 'modal');
+    this.modalContent = this.createHtmlNode('div', 'modal_content');
+    this.modalCloseBtn = this.createHtmlNode(
+      'span',
+      'icon',
+      'icon_close',
+      'close_modal',
+    );
+    this.setContent(strategyData);
+
+    this.appendElements();
+    this.closeModalHandler();
+  }
+
+  createHtmlNode(element, ...classes) {
+    const node = document.createElement(element);
+    node.classList.add(...classes);
+    return node;
+  }
+
+  setContent(strategyData) {
+      this.modalContent.innerHTML = strategyData.content;
+      this.modalImage.src = strategyData.img_url;
+      this.modalImage.alt = strategyData.title;
+  }
+
+  appendElements() {
+    this.modal.append(this.modalCloseBtn, this.modalImage, this.modalContent);
+    this.overlay.append(this.modal);
+  }
+
+  closeModal() {
+    this.overlay.remove();
+  }
+
+  closeModalHandler() {
+    this.modalCloseBtn.addEventListener('click', () => {
+      this.closeModal();
+    });
+    this.overlay.addEventListener('click', (e) => {
+      if(e.target === this.overlay) {
+        this.closeModal();
+      }
+    })
+  }
+
+  openModal() {
+    const body = document.querySelector('body');
+    body.append(this.overlay);
+  }
+}
