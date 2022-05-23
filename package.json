@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "sass --watch ./src/sass/index.scss ./src/styles/style.css",
-    "sass": "sass ./src/sass/index.scss ./src/styles/style.css"
+    "sass": "sass ./src/sass/index.scss ./src/styles/style.css",
+    "build": "webpack --config webpack.prod.js",
+    "dev": "webpack serve --config webpack.dev.js",
+    "lint": "eslint src --fix"
   },
   "repository": {
     "type": "git",
@@ -16,6 +18,26 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/alexeyvalko/productly-landing/issues"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^10.2.4",
+    "css-loader": "^5.2.4",
+    "css-minimizer-webpack-plugin": "^3.4.1",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-webpack-plugin": "^2.5.4",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.6.0",
+    "prettier": "2.3.0",
+    "sass": "^1.32.12",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
   },
   "homepage": "https://github.com/alexeyvalko/productly-landing#readme"
 }
