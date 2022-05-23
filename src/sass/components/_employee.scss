@@ -32,6 +32,9 @@ $image-shift: 32px;
   @include media-mobile {
     width: calc(100% - 31px);
   }
+  @include media-small {
+    min-width: 285px
+  }
 }
 
 .employee_image {

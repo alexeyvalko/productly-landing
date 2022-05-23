@@ -54,6 +54,12 @@
   &:hover {
     text-decoration: underline;
   }
+  @include media-mobile {
+    @include font(2rem, 2.6rem, 400);
+  }
+  @include media-small {
+    @include font(1.5rem, 2.6rem, 400);
+  }
 }
 
 .contact-us__form {
@@ -63,10 +69,15 @@
     background-color: $color-light;
     border-radius: 5px;
     padding: 10px 20px;
+    width: 100%;
     &:focus {
       outline: 2px solid $color-primary;
     }
   }
+}
+
+.contact-us__inputs {
+  gap: 10px;
 }
 
 .contact-us_btn {

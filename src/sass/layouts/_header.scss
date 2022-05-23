@@ -18,20 +18,31 @@
   justify-content: space-between;
   align-items: center;
   gap: 14px;
-  @include media-mobile {
+  @include media-landscape {
     display: none;
   }
 }
 
 .logo-wrapper {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 37px;
+  @include media-mobile {
+    width: 100%;
+  }
 }
 
 .logo-header {
   @include media-mobile {
     max-width: 158px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @include media-small {
+    max-width: 130px;
   }
 }
 

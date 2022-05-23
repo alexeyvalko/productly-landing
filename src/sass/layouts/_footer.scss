@@ -5,7 +5,14 @@
 
 .footer-logo {
   max-width: 198px;
+  @include media-mobile {
+    max-width: 158px;
+  }
+  @include media-small {
+    max-width: 130px;
+  }
 }
+
 .footer_wrapper {
   display: flex;
   gap:150px;
