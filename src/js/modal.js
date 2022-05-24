@@ -31,13 +31,21 @@ export class Modal {
   }
 
   setContent(strategyData) {
+    if (typeof strategyData === 'string') {
+      this.modalContent.innerHTML = strategyData;
+    } else {
       this.modalContent.innerHTML = strategyData.content;
       this.modalImage.src = strategyData.img_url;
       this.modalImage.alt = strategyData.title;
+    }
   }
 
-  appendElements() {
-    this.modal.append(this.modalCloseBtn, this.modalImage, this.modalContent);
+  appendElements() {;
+    if(this.modalImage.src.length > 0) {
+      this.modal.append(this.modalCloseBtn, this.modalImage, this.modalContent);
+    } else {
+      this.modal.append(this.modalCloseBtn, this.modalContent);
+    }
     this.overlay.append(this.modal);
   }
 
@@ -50,10 +58,10 @@ export class Modal {
       this.closeModal();
     });
     this.overlay.addEventListener('click', (e) => {
-      if(e.target === this.overlay) {
+      if (e.target === this.overlay) {
         this.closeModal();
       }
-    })
+    });
   }
 
   openModal() {
