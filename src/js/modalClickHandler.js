@@ -1,4 +1,3 @@
-
 import { Modal } from './modal';
 import { data } from './data';
 
@@ -8,7 +7,7 @@ const generateModal = (content) => {
   modal.openModal();
 };
 
-export const modalClickHandler = () => {
+export const modalClickArticlesHandler = () => {
   document
     .querySelector('.strategies__wrapper')
     .addEventListener('click', (e) => {
@@ -18,4 +17,11 @@ export const modalClickHandler = () => {
         generateModal(strategyData);
       }
     });
+};
+
+export const modalClickFormHandler = () => {
+  document.querySelector('.contact-us_btn').addEventListener('click', (e) => {
+    e.preventDefault();
+    generateModal('<p style="text-align: center; font-size: 3rem">Email sent!<p>');
+  });
 };

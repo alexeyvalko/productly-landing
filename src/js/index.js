@@ -1,12 +1,16 @@
 import '../sass/index.scss';
 
 import { tagsClicksHandler } from './tagsClicksHandler';
-import { modalClickHandler } from './modalClickHandler';
+import { modalClickArticlesHandler, modalClickFormHandler } from './modalClickHandler';
 import { burgerClickHandler } from './burgerClickHandler';
+
+
+
 
 
 window.onload = () => {
   tagsClicksHandler();
-  modalClickHandler();
+  modalClickArticlesHandler();
   burgerClickHandler();
+  modalClickFormHandler()
 };
