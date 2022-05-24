@@ -6,6 +6,7 @@ $image-shift: 32px;
   justify-content: space-between;
   overflow: hidden;
   gap: 65px;
+  padding-bottom: 20px;
   @include media-laptop {
     overflow-x: scroll;
   }
