@@ -35,6 +35,7 @@
 }
 
 .logo-header {
+  max-height: 32px;
   @include media-mobile {
     max-width: 158px;
     position: absolute;
