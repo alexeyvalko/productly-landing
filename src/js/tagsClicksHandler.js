@@ -18,7 +18,6 @@ const showAllStrategies = () => {
 };
 
 const filterStrategiesByTagName = (text) => {
-
   document
     .querySelectorAll('.strategies__wrapper .strategy')
     .forEach((strategy) => {

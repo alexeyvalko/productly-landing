@@ -16,7 +16,8 @@ const remOverlay = (overlay) => {
   });
 };
 
-const addOverlay = (overlay, body) => {
+const addOverlay = (body) => {
+  const overlay = document.createElement('div');
   overlay.classList.add('overlay');
   body.appendChild(overlay);
   remOverlay(overlay);
@@ -34,39 +35,36 @@ const linksClickHandler = (ul) => {
     if (e.target.tagName === 'A') {
       removeMenu();
     }
-  })
-}
+  });
+};
 
 const addLinks = (menu) => {
   const links = ['Home', 'Services', 'About', 'Product'];
   const ul = document.createElement('ul');
   const liArray = links.map((link) => {
     const li = document.createElement('li');
-    const a = document.createElement('a')
-    a.href='#';
+    const a = document.createElement('a');
+    a.href = '#';
     a.textContent = link;
-    li.appendChild(a)
+    li.appendChild(a);
     return li;
-  })
+  });
   ul.classList.add('hamburger__links');
   ul.append(...liArray);
   linksClickHandler(ul);
   menu.append(ul);
 };
 
-
-
 export const burgerClickHandler = () => {
   document.querySelector('.hamburger ').addEventListener('click', (e) => {
     const hamburger = e.target.closest('.hamburger');
-    const body = document.querySelector('body');
-    const menu = document.createElement('div');
-    const overlay = document.createElement('div');
     if (!hamburger.classList.contains('crest')) {
+      const body = document.querySelector('body');
+      const menu = document.createElement('div');
       hamburger.classList.add('crest');
       menu.classList.add('hamburger-menu', 'hide');
       addLinks(menu);
-      addOverlay(overlay, body);
+      addOverlay(body);
       addMenu(body, menu);
     } else {
       removeMenu();
