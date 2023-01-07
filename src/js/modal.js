@@ -1,16 +1,16 @@
 export class Modal {
-  constructor(classes) {
+  constructor(...classes) {
     this.classes = classes;
-    this.modal = '';
-    this.modalContent = '';
-    this.modalCloseBtn = '';
-    this.modalImage = '';
+    this.modal = null;
+    this.modalContent = null;
+    this.modalCloseBtn = null;
+    this.modalImage = null;
   }
 
   buildModal(strategyData) {
     this.modalImage = this.createHtmlNode('img', 'modal__image');
     this.overlay = this.createHtmlNode('div', 'overlay');
-    this.modal = this.createHtmlNode('div', 'modal');
+    this.modal = this.createHtmlNode('div', 'modal', ...this.classes);
     this.modalContent = this.createHtmlNode('div', 'modal_content');
     this.modalCloseBtn = this.createHtmlNode(
       'span',
@@ -19,7 +19,6 @@ export class Modal {
       'close_modal',
     );
     this.setContent(strategyData);
-
     this.appendElements();
     this.closeModalHandler();
   }

@@ -1,8 +1,8 @@
-import { Modal } from './modal';
+import { Modal } from './Modal';
 import { data } from './data';
 
-const generateModal = (content) => {
-  const modal = new Modal('tool_modal');
+const generateModal = (content, classes) => {
+  const modal = new Modal(classes);
   modal.buildModal(content);
   modal.openModal();
 };
@@ -14,14 +14,19 @@ export const modalClickArticlesHandler = () => {
       if (e.target.closest('.strategy')) {
         const strategyId = e.target.closest('.strategy').dataset.id;
         const strategyData = data.find((item) => item.id === strategyId);
-        generateModal(strategyData);
+        generateModal(strategyData, 'tool_modal');
       }
     });
 };
 
 export const modalClickFormHandler = () => {
-  document.querySelector('.contact-us_btn').addEventListener('click', (e) => {
+  document.querySelector('#contact_form').addEventListener('submit', (e) => {
     e.preventDefault();
-    generateModal('<p style="text-align: center; font-size: 3rem">Email sent!<p>');
+    const formData = new FormData(e.target);
+    const formDataObject = Object.fromEntries(formData.entries());
+    generateModal(
+      `<p style="text-align: center; font-size: 3rem">Thanks for your message <strong>${formDataObject.name}</strong>!<p><p style="text-align: center; font-size: 3rem; line-height: 1.2;">We answer you on your email <strong>${formDataObject.email}</strong><p>`,
+      'form_modal'
+    );
   });
 };
