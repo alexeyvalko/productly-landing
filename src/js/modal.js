@@ -40,10 +40,14 @@ export class Modal {
     }
   }
 
-  appendElements() {;
-    if(this.modalImage.src.length > 0) {
-      this.modalImageWrapper.append(this.modalImage)
-      this.modal.append(this.modalCloseBtn, this.modalImageWrapper, this.modalContent);
+  appendElements() {
+    if (this.modalImage.src.length > 0) {
+      this.modalImageWrapper.append(this.modalImage);
+      this.modal.append(
+        this.modalCloseBtn,
+        this.modalImageWrapper,
+        this.modalContent,
+      );
     } else {
       this.modal.append(this.modalCloseBtn, this.modalContent);
     }
@@ -65,9 +69,15 @@ export class Modal {
     });
   }
 
+  addContendOverlay() {
+    const height = 284;
+    if (this.modalContent.offsetHeight > height)
+      this.modalContent.classList.add('modal_content-scroll');
+  }
+
   openModal() {
     const body = document.querySelector('body');
     body.append(this.overlay);
-    if(this.modalContent.offsetHeight > 270) this.modalContent.classList.add('modal_content-scroll')
+    this.addContendOverlay();
   }
 }

@@ -13,6 +13,9 @@
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  @include media-tablet {
+    width: 85vw;
+  }
 }
 
 .modal__image-wrapper {
