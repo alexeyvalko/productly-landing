@@ -25,7 +25,7 @@ export const modalClickFormHandler = () => {
     const formData = new FormData(e.target);
     const formDataObject = Object.fromEntries(formData.entries());
     generateModal(
-      `<p style="text-align: center; font-size: 3rem">Thanks for your message <strong>${formDataObject.name}</strong>!<p><p style="text-align: center; font-size: 3rem; line-height: 1.2;">We answer you on your email <strong>${formDataObject.email}</strong><p>`,
+      `<p style="text-align: center; font-size: 3rem">Thanks for your message <strong>${formDataObject.name}</strong>!<p><p style="text-align: center; font-size: 3rem; line-height: 1.2;">We answer you on email <strong>${formDataObject.email}</strong><p>`,
       'form_modal'
     );
   });
