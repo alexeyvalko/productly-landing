@@ -68,5 +68,6 @@ export class Modal {
   openModal() {
     const body = document.querySelector('body');
     body.append(this.overlay);
+    if(this.modalContent.offsetHeight > 270) this.modalContent.classList.add('modal_content-scroll')
   }
 }
