@@ -9,6 +9,7 @@ export class Modal {
 
   buildModal(strategyData) {
     this.modalImage = this.createHtmlNode('img', 'modal__image');
+    this.modalImageWrapper = this.createHtmlNode('div', 'modal__image-wrapper');
     this.overlay = this.createHtmlNode('div', 'overlay');
     this.modal = this.createHtmlNode('div', 'modal', ...this.classes);
     this.modalContent = this.createHtmlNode('div', 'modal_content');
@@ -41,7 +42,8 @@ export class Modal {
 
   appendElements() {;
     if(this.modalImage.src.length > 0) {
-      this.modal.append(this.modalCloseBtn, this.modalImage, this.modalContent);
+      this.modalImageWrapper.append(this.modalImage)
+      this.modal.append(this.modalCloseBtn, this.modalImageWrapper, this.modalContent);
     } else {
       this.modal.append(this.modalCloseBtn, this.modalContent);
     }
