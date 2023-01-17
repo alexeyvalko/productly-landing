@@ -45,8 +45,15 @@
 
 .close_modal {
   position: absolute;
-  top: 26px;
+  top: 22px;
   right: 26px;
+  background-color: none;
+  padding: 13px;
+  border: none;
+}
+
+.close_modal:focus {
+  outline: 1px solid #333;
 }
 
 .off-scroll {
