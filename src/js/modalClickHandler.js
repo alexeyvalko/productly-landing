@@ -1,4 +1,4 @@
-import { Modal } from './Modal';
+import { Modal } from './modal';
 import { data } from './data';
 
 const generateModal = (content, classes) => {
